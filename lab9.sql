@@ -8,7 +8,8 @@ DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS salesmen;
 
-DROP ROLE IF EXISTS junior_dev;
+DROP USER IF EXISTS junior_dev;
+DROP USER IF EXISTS intern;
 
 CREATE TABLE salesmen(
 	salesman_id INTEGER PRIMARY KEY,
