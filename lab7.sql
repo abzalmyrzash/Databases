@@ -24,21 +24,25 @@ CREATE TABLE employees (
   department_id INTEGER REFERENCES departments
 );
 
+--3
 SELECT first_name, last_name, employees.department_id, department_name 
 	FROM employees LEFT JOIN departments ON employees.department_id = departments.department_id;
 
+--4
 SELECT first_name, last_name, employees.department_id, department_name
 	FROM employees LEFT JOIN departments ON employees.department_id = departments.department_id
 		WHERE departments.department_id = 40 OR departments.department_id = 80;
 
+--5
 SELECT first_name, last_name, department_name, city, state_province
 	FROM employees LEFT JOIN departments ON employees.department_id = departments.department_id
         JOIN locations ON departments.location_id = locations.location_id;
 
-
+--6
 SELECT d1.department_id, d1.department_name, d2.budget, d2.location_id
 	FROM departments d1 JOIN departments d2 USING (department_id);
 
+--7
 SELECT first_name, last_name, employees.department_id, department_name
 	FROM employees LEFT JOIN departments ON employees.department_id = departments.department_id
-		WHERE employees.department_id ISNULL OR employees.department_id NOTNULL;
+		WHERE employees.department_id IS NULL OR employees.department_id IS NOT NULL;
