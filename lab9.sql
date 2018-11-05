@@ -2,6 +2,7 @@ DROP VIEW IF EXISTS NY_salesmen;
 DROP VIEW IF EXISTS order_salesman_customer;
 DROP VIEW IF EXISTS cust_max_grade;
 DROP VIEW IF EXISTS salesmen_per_city;
+DROP VIEW IF EXISTS salesmen_with_many_customers;
 
 DROP TABLE IF EXISTS orders;
 DROP TABLE IF EXISTS customers;
