@@ -90,4 +90,4 @@ CREATE VIEW salesmen_with_many_customers AS SELECT salesman_id FROM salesmen AS 
 	
 --9
 CREATE USER intern;
-REASSIGN OWNED BY junior_dev TO intern;
+GRANT junior_dev TO intern;
